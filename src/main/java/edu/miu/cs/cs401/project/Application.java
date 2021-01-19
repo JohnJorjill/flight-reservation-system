@@ -10,12 +10,10 @@ public class Application {
 
 		ReservationSystemService service = ServiceFactory.getReservationSystemService();
 		System.out.println(service.findAllAirports());
-	
-		//Sample comment
+		
 		System.out.println(service.findAirportByAirportCode("CID"));
 		System.out.println(service.findAirportByAirportCode("CID"));
-		// orgil
-		//commit
+		System.out.println(service.findAirportByAirportCode("CID"));
 	}
 
 }
