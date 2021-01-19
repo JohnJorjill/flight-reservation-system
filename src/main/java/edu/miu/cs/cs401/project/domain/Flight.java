@@ -4,24 +4,24 @@ import java.time.LocalTime;
 import java.util.UUID;
 
 public class Flight {
-	
+
 	private final String id;
-	
+
 	private String number;
-	
+
 	private int capacity;
-	
+
 	private LocalTime departureTime;
-	
+
 	private LocalTime arrivalTime;
-	
+
 	private Airport departureAirport;
-	
+
 	private Airport arrivalAirport;
-	
-	public Flight(String number, int capacity, LocalTime departureTime, LocalTime arrivalTime,
-			Airport departureAirport, Airport arrivalAirport) {
-		
+
+	public Flight(String number, int capacity, LocalTime departureTime, LocalTime arrivalTime, Airport departureAirport,
+			Airport arrivalAirport) {
+
 		this.number = number;
 		this.capacity = capacity;
 		this.departureTime = departureTime;
@@ -78,7 +78,12 @@ public class Flight {
 	public void setArrivalAirport(Airport arrivalAirport) {
 		this.arrivalAirport = arrivalAirport;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "FlightNumber{" + "number='" + number + '\'' + ", capacity=" + capacity + ", departureTime="
+				+ departureTime + ", arrivalTime=" + arrivalTime + ", departureAirport=" + departureAirport
+				+ ", arrivalAirport=" + arrivalAirport + '}';
+	}
 
 }
