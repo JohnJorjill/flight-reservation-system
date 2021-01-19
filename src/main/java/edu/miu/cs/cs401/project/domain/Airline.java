@@ -25,8 +25,9 @@ public class Airline {
 		this.id = UUID.randomUUID().toString();
 	}
 
-	public void addFlightNumber() {
-		// TO DO
+	public void addFlightNumber(Flight fn)throws Exception {
+		validationFlightNumber(fn);
+		this.flightNumberList.add(fn);
 	}
 
 	public void validationFlightNumber(Flight fn) throws Exception {
