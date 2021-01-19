@@ -1,5 +1,5 @@
 package edu.miu.cs.cs401.project.domain;
 
-public class Passenger {
+public class Passenger extends Person{
 
 }
