@@ -13,6 +13,7 @@ public class Application {
 		
 		//hello everyone 
 		System.out.println(service.findAirportByAirportCode("CID"));
+		System.out.println(service.findAirportByAirportCode("CID"));
 		
 	}
 
