@@ -29,9 +29,14 @@ public class ReservationSystemRepositoryImpl implements ReservationSystemReposit
 	private Map<Integer, Crew> crews= new HashMap<>();
 	private Map<Integer, Agent> agents= new HashMap<>();
 	
-	ReservationSystemRepositoryImpl() {
+	// added constructor by Orgil
+	// setupAirports() setupPassengers() setupAgents() will work on 
+	// instantiation of ReservationSystemRepositoryImpl class
+	public ReservationSystemRepositoryImpl() throws Exception {
 		super();
 		setupAirports();
+		setupPassengers();
+		setupAgents();
 	}
 	
 	private void setupAirports() {

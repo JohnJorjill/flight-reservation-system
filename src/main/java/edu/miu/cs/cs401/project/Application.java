@@ -12,8 +12,6 @@ public class Application {
 		System.out.println(service.findAllAirports());
 		
 		System.out.println(service.findAirportByAirportCode("CID"));
-		System.out.println(service.findAirportByAirportCode("CID"));
-		System.out.println(service.findAirportByAirportCode("CID"));
 	}
 
 }
