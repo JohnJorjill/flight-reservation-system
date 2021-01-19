@@ -1,5 +1,12 @@
 package edu.miu.cs.cs401.project.domain;
 
-public class Pilot {
+import java.time.LocalDate;
+
+public class Pilot extends Person{
+
+	public Pilot(Address address, String firstName, String lastName, LocalDate birthday, String email) {
+		super(address, firstName, lastName, birthday, email);
+		// TODO Auto-generated constructor stub
+	}
 
 }
