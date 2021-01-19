@@ -12,6 +12,7 @@ import edu.miu.cs.cs401.project.domain.Reservation;
 
 public interface ReservationSystemRepository {
 	
+	// changed Collections to List
 	List<Airport> findAllAirports();
 	
 	Airport findAirportByAirportCode(String airportCode);
@@ -26,10 +27,10 @@ public interface ReservationSystemRepository {
 	
 	List<Passenger> findPassengersByAgentCode(String agentCode);
 	
-	Passenger findPassengerById(int id);
+	Passenger findPassengerById(int id); // added by Orgil
 	
-	Agent findAgentById(int id);
+	Agent findAgentById(int id); // added by Orgil
 	
-	String getSampleCity();
+	String getSampleCity(); // added by Orgil
 	
 }
