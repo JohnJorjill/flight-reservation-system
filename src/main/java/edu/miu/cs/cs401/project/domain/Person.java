@@ -10,58 +10,57 @@ public class Person {
 	private LocalDate birthday;
 	private String email;
 	private Address address;
-//Person class
-		public Person(Address address, String firstName, String lastName, LocalDate birthday, String email) {
-			this.setAddress(address);
-			this.setFirstName(firstName);
-			this.setLastName(lastName);
-			this.setBirthday(birthday);
-			this.setEmail(email);
-			this.id = UUID.randomUUID().toString();
-		}
 
-		public String getEmail() {
-			return email;
-		}
+	public Person(Address address, String firstName, String lastName, LocalDate birthday, String email) {
+		this.setAddress(address);
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+		this.setBirthday(birthday);
+		this.setEmail(email);
+		this.id = UUID.randomUUID().toString();
+	}
 
-		public void setEmail(String email) {
-			this.email = email;
-		}
+	public String getEmail() {
+		return email;
+	}
 
-		public LocalDate getBirthday() {
-			return birthday;
-		}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-		public void setBirthday(LocalDate birthday) {
-			this.birthday = birthday;
-		}
+	public LocalDate getBirthday() {
+		return birthday;
+	}
 
-		public String getLastName() {
-			return lastName;
-		}
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
+	}
 
-		public void setLastName(String lastName) {
-			this.lastName = lastName;
-		}
+	public String getLastName() {
+		return lastName;
+	}
 
-		public String getFirstName() {
-			return firstName;
-		}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-		public void setFirstName(String firstName) {
-			this.firstName = firstName;
-		}
+	public String getFirstName() {
+		return firstName;
+	}
 
-		public Address getAddress() {
-			return address;
-		}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-		public void setAddress(Address address) {
-			this.address = address;
-		}
+	public Address getAddress() {
+		return address;
+	}
 
-		public String getId() {
-			return id;
-		}	
-	
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public String getId() {
+		return id;
+	}	
 }
