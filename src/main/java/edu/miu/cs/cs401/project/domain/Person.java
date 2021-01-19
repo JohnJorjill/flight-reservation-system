@@ -10,7 +10,7 @@ public class Person {
 	private LocalDate birthday;
 	private String email;
 	private Address address;
-
+//Person class
 		public Person(Address address, String firstName, String lastName, LocalDate birthday, String email) {
 			this.setAddress(address);
 			this.setFirstName(firstName);
