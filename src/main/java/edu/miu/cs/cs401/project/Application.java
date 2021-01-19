@@ -5,7 +5,7 @@ import edu.miu.cs.cs401.project.service.ServiceFactory;
 
 public class Application {
 //hello
-	// hello world
+
 	public static void main(String[] args) {
 		System.out.println("Airline Reservation System");
 
@@ -13,7 +13,7 @@ public class Application {
 		System.out.println(service.findAllAirports());
 		
 		System.out.println(service.findAirportByAirportCode("CID"));
-		
+		// orgil
 	}
 
 }
