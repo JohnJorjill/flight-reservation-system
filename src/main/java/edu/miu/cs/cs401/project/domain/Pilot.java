@@ -6,7 +6,6 @@ public class Pilot extends Person{
 
 	public Pilot(Address address, String firstName, String lastName, LocalDate birthday, String email) {
 		super(address, firstName, lastName, birthday, email);
-		// TODO Auto-generated constructor stub
 	}
 
 }

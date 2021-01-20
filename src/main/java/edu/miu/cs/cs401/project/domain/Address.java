@@ -24,9 +24,16 @@ public class Address {
 		this.street = faker.address().buildingNumber() + " " + faker.address().streetName();
 		this.city = faker.address().city();
 		this.state = faker.address().state();
-		this.zip = faker.address().zipCode();
-		
+		this.zip = faker.address().zipCode();		
 		this.id = UUID.randomUUID().toString();
+	}
+	
+	public Address(String street, String city, String state, String zip) {
+		this.id = UUID.randomUUID().toString();
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
 	}
 
 	public String getId() {
