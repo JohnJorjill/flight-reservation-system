@@ -58,16 +58,16 @@ public class ReservationSystemRepositoryImpl implements ReservationSystemReposit
 		airport5 = new Airport("APT5", "Airport 5", new Address());
 		
 		
-		
+		//getId => getCode
 		Airline airline;
 		airline = new Airline("AL", "Airline1", "The best airline since 1940");
-		airlines.put(airline.getId(), airline);
+		airlines.put(airline.getCode(), airline);
 		
 		airline = new Airline("AI", "Airline2", "The nicest airline since 1965");
-		airlines.put(airline.getId(), airline);
+		airlines.put(airline.getCode(), airline);
 		
 		airline = new Airline("AN", "Airline3", "The coolest airline since 1998");
-		airlines.put(airline.getId(), airline);
+		airlines.put(airline.getCode(), airline);
 
 	}
 
