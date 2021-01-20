@@ -31,6 +31,13 @@ public class Flight {
 		this.id = UUID.randomUUID().toString();
 	}
 
+	
+	
+	public String getId() {
+		return id;
+	}
+
+
 	public String getNumber() {
 		return number;
 	}
