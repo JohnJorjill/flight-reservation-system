@@ -41,16 +41,7 @@ public class ReservationSystemRepositoryImpl implements ReservationSystemReposit
 	
 	private void setupAirports() {
 		
-		Airport airport;
-		
-		airport = new Airport("CID", "Eastern Iowa Airport", new Address());
-		airports.put(airport.getId(), airport);
-		
-		airport = new Airport("ORD", "Chicago O'Hare International Airport", new Address());
-		airports.put(airport.getId(), airport);
-		
-		airport = new Airport("CLT", "Charlotte Douglas International Airport", new Address());
-		airports.put(airport.getId(), airport);
+
 		
 	}
 
@@ -70,31 +61,31 @@ public class ReservationSystemRepositoryImpl implements ReservationSystemReposit
 	}
 
 	@Override
-	public Collection<Airport> findAirportsByCity(String city) {
+	public List<Airport> findAirportsByCity(String city) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Airline> findAirlinesByAirportCode(String airportCode) {
+	public List<Airline> findAirlinesByAirportCode(String airportCode) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Flight> findFlightsFromTo(String departure, String arrival) {
+	public List<Flight> findFlightsFromTo(String departure, String arrival) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Reservation> findReservationsByPassengerId(Integer passengerId) {
+	public List<Reservation> findReservationsByPassengerId(Integer passengerId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Passenger> findPassengersByAgentCode(String agentCode) {
+	public List<Passenger> findPassengersByAgentCode(String agentCode) {
 		// TODO Auto-generated method stub
 		return null;
 	}
