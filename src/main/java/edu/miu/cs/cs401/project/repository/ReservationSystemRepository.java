@@ -7,13 +7,14 @@ import edu.miu.cs.cs401.project.domain.Agent;
 import edu.miu.cs.cs401.project.domain.Airline;
 import edu.miu.cs.cs401.project.domain.Airport;
 import edu.miu.cs.cs401.project.domain.Flight;
+import edu.miu.cs.cs401.project.domain.FlightInstance;
 import edu.miu.cs.cs401.project.domain.Passenger;
 import edu.miu.cs.cs401.project.domain.Reservation;
 
 public interface ReservationSystemRepository {
 	
 	// changed Collections to List
-	List<Airport> findAllAirports();
+	Collection<Airport> findAllAirports();
 	
 	Airport findAirportByAirportCode(String airportCode);
 	

@@ -2,6 +2,7 @@ package edu.miu.cs.cs401.project.service;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.List;
 
 import edu.miu.cs.cs401.project.domain.Agent;
 import edu.miu.cs.cs401.project.domain.Airline;
@@ -15,7 +16,7 @@ public class ReservationSystemServiceImpl implements ReservationSystemService {
 	
 	private ReservationSystemRepository repository;
 	
-	ReservationSystemServiceImpl(ReservationSystemRepository repository) {
+	public ReservationSystemServiceImpl(ReservationSystemRepository repository) throws Exception{
 		super();
 		this.repository = repository;
 	}
@@ -33,7 +34,7 @@ public class ReservationSystemServiceImpl implements ReservationSystemService {
 	@Override
 	public Collection<Airport> findAirportsByCity(String city) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.findAirportsByCity(city);
 	}
 
 	@Override
@@ -50,7 +51,7 @@ public class ReservationSystemServiceImpl implements ReservationSystemService {
 	}
 
 	@Override
-	public Collection<Passenger> findPassengersByAgentCode(String agentCode) {
+	public List<Passenger> findPassengersByAgentCode(String agentCode) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -80,7 +81,7 @@ public class ReservationSystemServiceImpl implements ReservationSystemService {
 	}
 
 	@Override
-	public Collection<Flight> findFlightsFromTo(String departure, String arrival, LocalDate flightDate) {
+	public List<Flight> findFlightsFromTo(String departure, String arrival, LocalDate flightDate) {
 		// TODO Auto-generated method stub
 		return null;
 	}

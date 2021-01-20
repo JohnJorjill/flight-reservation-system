@@ -2,11 +2,13 @@ package edu.miu.cs.cs401.project.service;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.List;
 
 import edu.miu.cs.cs401.project.domain.Agent;
 import edu.miu.cs.cs401.project.domain.Airline;
 import edu.miu.cs.cs401.project.domain.Airport;
 import edu.miu.cs.cs401.project.domain.Flight;
+import edu.miu.cs.cs401.project.domain.FlightInstance;
 import edu.miu.cs.cs401.project.domain.Passenger;
 import edu.miu.cs.cs401.project.domain.Reservation;
 
@@ -20,11 +22,11 @@ public interface ReservationSystemService {
 	
 	Collection<Airline> findAirlinesByAirportCode(String airportCode);
 	
-	Collection<Flight> findFlightsFromTo(String departure, String arrival, LocalDate flightDate);
+	List<Flight> findFlightsFromTo(String departure, String arrival, LocalDate flightDate);
 	
 	Collection<Reservation> findReservationsByPassengerId(Integer passengerId);
 	
-	Collection<Passenger> findPassengersByAgentCode(String agentCode);
+	List<Passenger> findPassengersByAgentCode(String agentCode);
 	
 	Reservation createReservation(Passenger passenger, Collection<Flight> flights); // Passenger reserves
 	
