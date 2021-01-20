@@ -22,6 +22,7 @@ public class Agent extends Person{
 		return this.passengerList;
 	}
 	
+	//passenger can cancel reservation based on the reservation code
 	public void cancelReservation(String reservationCode) throws Exception {
 		Passenger passenger = getPassengerFromReservationCode(reservationCode);
 		if(passenger == null) {
@@ -29,6 +30,7 @@ public class Agent extends Person{
 		}
 		passenger.cancelReservation(reservationCode);
 	}
+	
 	
 	public void confirmReservation(String reservationCode) throws Exception{
 		Passenger passenger = getPassengerFromReservationCode(reservationCode);
@@ -38,6 +40,7 @@ public class Agent extends Person{
 		passenger.confirmReservation(reservationCode);
 	}
 	
+	//find passenger based on the reservation code
 	public Passenger getPassengerFromReservationCode(String reservationCode) {
 		Passenger passenger = null;
 		for(Passenger p:passengerList) {

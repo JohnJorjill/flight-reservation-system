@@ -110,6 +110,7 @@ public class Reservation {
 
     }
 	
+	//Generate 6 character reservation code for creating a Ticket
 	private String generateCode() {
 		int length = 6;
 		boolean useLetters = true;
@@ -119,6 +120,7 @@ public class Reservation {
 		return generatedString.toUpperCase();
 	}
 	
+	//Confirm and purchase a ticket/s based on the flight Instances
 	void confirmAndPurchase() throws Exception {
 		if(status == CANCELED) {
 			throw new Exception("The reservation is already canceled");

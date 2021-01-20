@@ -53,6 +53,7 @@ public class Airport {
 		return departureAirlines;
 	}
 
+	//check if airline is allowed to depart
 	public boolean isAirlineAllowedToDepart(Airline airline) {
 		for (Airline al : this.departureAirlines) {
 			if (airline.getCode().equals(al.getCode())) {
@@ -62,6 +63,7 @@ public class Airport {
 		return false;
 	}
 
+	//check if airline is allowed to arrive
 	public boolean isAirlineAllowedToArrival(Airline airline) {
 		for (Airline al : this.arrivalAirlines) {
 			if (airline.getCode().equals(al.getCode())) {

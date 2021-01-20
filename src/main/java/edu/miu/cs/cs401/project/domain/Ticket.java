@@ -54,6 +54,7 @@ public class Ticket {
 				+ flightInstance + '}';
 	}
 
+	//generate 20 digit random number
 	private String generateNumber() {
 		int length = 20;
 		boolean useLetters = false;

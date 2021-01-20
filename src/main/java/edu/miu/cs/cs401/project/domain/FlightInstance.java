@@ -52,8 +52,11 @@ public class FlightInstance {
 		return arrivalDate;
 	}
 
+	
 	public void addPassenger(Passenger passenger) throws Exception {
+		//get the total number of passengers
 		int totalPassengers = passengerList.size() + crewList.size() + pilotList.size();
+		//check if there is a room to add another passenger
 		if (totalPassengers > flightNumber.getCapacity()) {
 			throw new Exception("There is no free set on this flight");
 		}

@@ -25,20 +25,25 @@ public class Airline {
 		this.id = UUID.randomUUID().toString();
 	}
 
+	//add a flight to the list of flights
 	public void addFlightNumber(Flight fn)throws Exception {
 		validationFlightNumber(fn);
 		this.flightNumberList.add(fn);
 	}
 
 	public void validationFlightNumber(Flight fn) throws Exception {
+		//if departure airport is equal to arrival airport
 		if (fn.getDepartureAirport().getCode().equals(fn.getArrivalAirport().getCode())) {
 			throw new Exception("Invalid Flight Number. Not allowed to depart and arrive and the same airport");
 		}
+		
+		//check whether a flight is allowed to departure from that airport
 		if (!fn.getDepartureAirport().isAirlineAllowedToDepart(this)) {
 			throw new Exception("Invalid Flight Number. Not allowed to depart from the airport "
 					+ fn.getDepartureAirport().getCode());
 		}
 
+		//check whether a flight is allowed to arrive at that airport
 		if (!fn.getArrivalAirport().isAirlineAllowedToArrival(this)) {
 			throw new Exception(
 					"Invalid Flight Number. Not Allowed to arrive at the airport " + fn.getArrivalAirport().getCode());
