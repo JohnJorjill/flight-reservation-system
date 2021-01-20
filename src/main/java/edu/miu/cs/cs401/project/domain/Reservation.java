@@ -119,7 +119,7 @@ public class Reservation {
 		return generatedString.toUpperCase();
 	}
 	
-	private void confirmAndPurchase() throws Exception {
+	void confirmAndPurchase() throws Exception {
 		if(status == CANCELED) {
 			throw new Exception("The reservation is already canceled");
 		}

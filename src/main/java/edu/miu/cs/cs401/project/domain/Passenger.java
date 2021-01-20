@@ -25,8 +25,30 @@ public class Passenger extends Person{
         return reservation;
     }
 	
-	
-	
-	
+	public void cancelReservation(String reservationCode) throws Exception {
+        Reservation reservation = findReservationByCode(reservationCode);
+        if(reservation == null) {
+            throw new Exception("Reservation code: " + reservationCode + " not found");
+        }
+        if(reservation.getStatus() == Reservation.CANCELED) {
+            throw new Exception("The reservation already canceled");
+        } else if (reservation.getStatus() == Reservation.CONFIRMED) {
+            throw new Exception("Cannot cancel the reservation. The reservation already confirmed and purchased");
+        }
+        for(FlightInstance flight : reservation.getFlightInstance()) {
+            flight.removePassenger(this);
+        }
+        reservation.setStatus(Reservation.CANCELED);
+    }
 
+    public void confirmReservation(String reservationCode) throws Exception {
+        Reservation reservation = findReservationByCode(reservationCode);
+        if(reservation == null) {
+            throw new Exception("Reservation code: " + reservationCode + " not found");
+        }
+        for(FlightInstance flight : reservation.getFlightInstance()) {
+            flight.addPassenger(this);
+        }
+        reservation.confirmAndPurchase();
+    }
 }
