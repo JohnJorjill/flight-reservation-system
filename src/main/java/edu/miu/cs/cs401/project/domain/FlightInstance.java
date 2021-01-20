@@ -25,7 +25,7 @@ public class FlightInstance {
 		this.arrivalDate = arrivalDate;
 		this.passengerList = new ArrayList<>();
 		this.crewList = crewList;
-		this.pilotList = pilotList;
+		this.pilotList = pilots;
 	}
 
 	public Flight getFlightNumber() {
