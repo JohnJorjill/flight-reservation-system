@@ -40,7 +40,10 @@ public class Airport {
 		this.address = address;
 	}
 
-
+	public String getId()
+	{
+		return id;
+	}
 
 	public String getCode() {
 		return code;
