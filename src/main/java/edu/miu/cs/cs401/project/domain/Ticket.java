@@ -16,7 +16,6 @@ public class Ticket {
 		this.flightInstance = flightInstance;
 		this.number = generateNumber();
 	}
-
 	public String getId() {
 		return id;
 	}
