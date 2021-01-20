@@ -7,9 +7,9 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class Reservation {
 	
-	public static final int CONFIRMED_PURCHASED = 2;
+	public static final int CONFIRMED = 2;
     public static final int CREATED = 1;
-    public static final int CANCEL = 0;
+    public static final int CANCELED = 0;
 	
 	private String id;
 	private String agentId;
@@ -76,14 +76,14 @@ public class Reservation {
 	}
 
 	public String getStatusDetail() {
-		if(status == CANCEL) {
+		if(status == CANCELED) {
 			return "CANCELED";
 		}
 		else if(status == CREATED) {
 			return "CREATED";
 		}
 		else {
-			return "CONFIRMED_AND_PURCHASED";
+			return "CONFIRMED";
 		}
 	}
 	
@@ -119,11 +119,11 @@ public class Reservation {
 		return generatedString.toUpperCase();
 	}
 	
-	private void confirmAndPurchase() throws Exception {
-		if(status == CANCEL) {
+	void confirmAndPurchase() throws Exception {
+		if(status == CANCELED) {
 			throw new Exception("The reservation is already canceled");
 		}
-		else if(status == CONFIRMED_PURCHASED) {
+		else if(status == CONFIRMED) {
 			throw new Exception("The reservation is already confirmed and purchased");
 		}
 		Ticket ticket;
@@ -131,6 +131,6 @@ public class Reservation {
 			ticket = new Ticket(getReservationCode(),f);
 			ticketList.add(ticket);
 		}
-		status = CONFIRMED_PURCHASED;
+		status = CONFIRMED;
 	}
 }
